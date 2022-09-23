@@ -56,10 +56,11 @@ StartFrame:
   REPEND
 
   ; sides of PF Border
-  ldx #%00100000
+  ldx #%01100000
   stx PF0
   ldx #%00000000
   stx PF1
+  ldx #%10000000
   stx PF2
   REPEAT 164
     sta WSYNC
