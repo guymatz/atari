@@ -46,10 +46,11 @@ StartFrame:
   REPEND
 
   ; top PF Border
-  ldx #%11100000
+  ldx #%01100000 ; <--  first 4 bits only
   stx PF0
-  ldx #%11111111
+  ldx #%11111111 ; -->
   stx PF1
+  ldx #%11111111 ; <--
   stx PF2
   REPEAT 7
     sta WSYNC
